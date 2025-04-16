@@ -7,6 +7,7 @@ import { useSelector } from "react-redux"
 const CompanySearchResults = () => {
   const [jobs, setJobs] = useState([])
   const params = useParams()
+
   const listOfCompany = useSelector((state) => {
     return state.pref.company.length
   })

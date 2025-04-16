@@ -6,7 +6,14 @@ const initialState = {
 
 const mainReducer = (state = initialState, action) => {
   switch (action.type) {
-    // case:
+    case "ADD_PREF":
+      return {
+        ...state,
+        pref: {
+          ...state.pref,
+          company: state.pref.company.concat(action.payload),
+        },
+      }
     // case:
     default:
       return state
